@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+
+    <link rel="stylesheet" href="{{url_for("static",filename= 'style.css')}}">
+
+    
+</head>
+<body>
+
+    <div class="login">
+        <h1> Crop Prediction Model </h1>
+        {#Creating  a form type structure#}
+
+        <form action= "{{url_for('predict')}}" method="POST"/> 
+            
+            <input type="text" name="N" placeholder="Nitrogen (N)" required="required"/><br><br> {# required -- must have to give info nahi to submit nahi hoga #}
+
+            <input type="text" name="P" placeholder="Phosphorus (P)" required="required"/><br><br>
+
+            <input type="text" name="K" placeholder="Potassium (K)" required="required"/><br><br>
+
+            <input type="text" name="temperature" placeholder="Temperature" required="required"/><br><br>
+
+            <input type="text" name="humidity" placeholder="Humidity" required="required"/><br><br>
+
+            <input type="text" name="ph" placeholder="pH Value" required="required"/><br><br>
+
+            <input type="text" name="rainfall" placeholder="Rainfall" required="required"/><br><br>
+
+            <input type="submit" value="Predict">
+    
+        </form>
+
+        {#To display the predicted output #}
+        {% if prediction_text %} {#To avoid an empty <h1> before the user submits the form,#}
+                                 {#This way, <h1> appears only after the user submits. #}
+
+                                 
+            <h1 id='pred1'>{{ prediction_text }}</h1>
+        {% endif %}
+
+    </div>
+
+    
+
+
+
+
+
+</body>
+</html>

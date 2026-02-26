@@ -1,0 +1,21 @@
+YT playlist- https://www.youtube.com/watch?v=eYboT7EqVoQ&list=PLiFErliE7g4VNhGqcbH-mxDW0_gTG2JKB
+Here we learn to build a machine learning model using Flask framework 
+
+
+train_test_split splits your dataset into:
+
+    Training data → used to train the model
+
+    Testing data → used to evaluate the model
+
+
+ # N = float(request.form["N"])
+    # P = float(request.form["P"])
+    # K = float(request.form["K"])
+    # temperature = float(request.form["temperature"])
+    # humidity = float(request.form["humidity"])
+    # ph = float(request.form["ph"])
+    # rainfall = float(request.form["rainfall"])
+
+    # features = [[N, P, K, temperature, humidity, ph, rainfall]]
+    # prediction = model.predict(features)
